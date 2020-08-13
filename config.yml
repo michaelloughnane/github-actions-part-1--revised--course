@@ -1,0 +1,16 @@
+title: GitHub Actions Part 1 (Revised)
+description: modified from githubtrainingteam's tutorial
+template:
+  repo: github-actions-part-1-(revised)-template
+  name: github-actions-part-1-(revised)
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
